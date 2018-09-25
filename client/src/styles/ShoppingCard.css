@@ -1,0 +1,27 @@
+.card {
+  border: 1px solid black;
+  width: 18rem;
+}
+
+.card-text {
+  color: #7f7f7f;
+}
+.price {
+  font-weight: bold;
+  font-size: 16px;
+}
+.card-img-top {
+  width: 280px;
+  height: 210px;
+}
+.price-addChart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.more-details {
+  margin-top: 15px;
+}
+.not-found {
+  color: grey;
+}

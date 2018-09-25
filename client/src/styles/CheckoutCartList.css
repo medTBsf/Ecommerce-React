@@ -1,0 +1,23 @@
+h1,
+h2 {
+  text-align: center;
+}
+
+h2 {
+  width: 100%;
+  margin: 0;
+  color: #c5c5c5;
+}
+.image-empty-cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.continue-button {
+  text-align: center;
+}
+
+.reset-button {
+  text-align: center;
+}
