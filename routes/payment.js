@@ -14,10 +14,9 @@ router.post("/", (req, res) => {
     name: req.body.name,
     email: req.body.email,
     adress: req.body.adress,
-    cardHolder: req.body.cardHolder,
+    cardSerial: req.body.cardSerial,
     cvc: req.body.cvc,
-    expMonth: req.body.expMonth,
-    expYear: req.body.expYear,
+    phone: req.body.phone,
     paymentTotal: req.body.paymentTotal
   };
 
@@ -35,17 +34,19 @@ function validate(payment) {
       .regex(/\D/)
       .required(),
     adress: Joi.string(),
-    cardHolder: Joi.string(),
-    cvc: Joi.number(),
+    cardSerial: Joi.number()
+      .min(1000000000000000)
+      .max(9999999999999999)
+      .required(),
+    cvc: Joi.number().required(),
     email: Joi.string()
       .regex(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
       .required(),
-    expMonth: Joi.number()
-      .min(1)
-      .max(12),
-    expYear: Joi.number()
-      .min(2019)
-      .max(2029),
+    phone: Joi.number()
+      .min(20000000)
+      .max(99999999)
+      .required(),
+
     paymentTotal: Joi.number()
   };
   return Joi.validate(payment, schema);

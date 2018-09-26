@@ -52,7 +52,7 @@ class NavBar extends Component {
                     <a className="dropdown-item" href="">
                       User account
                     </a>
-                    <a className="dropdown-item" href="">
+                    <a className="dropdown-item" href="/">
                       <i className="fa fa-sign-out-alt" /> Logout
                     </a>
                   </div>

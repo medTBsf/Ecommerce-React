@@ -5,7 +5,7 @@ import "./App.css";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import CardsList from "./components/CardsList";
-import products from "./products/Products";
+//import products from "./products/Products";
 import CheckoutCartList from "./components/CheckoutCartList";
 import CategoriesNav from "./components/CategoriesNav";
 import CategoriesFilter from "./components/CategoryFilter";
@@ -119,7 +119,15 @@ class App extends Component {
             <Route
               path="/"
               exact
-              render={() => <Link to="/home">login</Link>}
+              render={() => (
+                <div className="login-zone">
+                  <Link to="/home">
+                    <button className="btn btn-outline-dark login-btn">
+                      login
+                    </button>
+                  </Link>
+                </div>
+              )}
             />
             <Route
               path="/home"
